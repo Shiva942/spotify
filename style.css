@@ -16,7 +16,6 @@ iframe {
 	flex-direction: column;
 	justify-content: center;
 }
-
 .main-container form,
 section,
 .playlist {
@@ -24,7 +23,6 @@ section,
 	align-items: center;
 	justify-content: center;
 }
-
 .form,
 .playlist {
 	width: 50%;
