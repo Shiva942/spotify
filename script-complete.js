@@ -33,7 +33,6 @@ app.getAlbums = function(artists) {
 				.map(a => a[0].items)
 				.reduce((prev,curr) => [...prev,...curr] ,[])
 				.map(album => app.getAlbumTracks(album.id));
-
 			app.getTracks(albumIds);
 		});
 };
