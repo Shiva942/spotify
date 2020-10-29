@@ -8,7 +8,9 @@ input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer;}b
 iframe {
 	border: none;
 }
-
+.text-long{
+	font-size : 25 px;
+}
 .main-container {
 	min-height: 100vh;
 	background: linear-gradient(75deg, rgba(119, 205, 155, 0.82), rgba(69, 24, 115, 0.53));
