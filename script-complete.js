@@ -1,5 +1,8 @@
+
 const app = {};
+
 var temp='temp';
+
 app.getArists = (artist) => $.ajax({
 	url: 'https://api.spotify.com/v1/search',
 	method: 'GET',
@@ -9,6 +12,7 @@ app.getArists = (artist) => $.ajax({
 		q: artist
 	}
 });
+
 
 app.getAristsAlbums = (id) => $.ajax({
 	url: `https://api.spotify.com/v1/artists/${id}/albums`,
@@ -33,7 +37,6 @@ app.getAlbums = function(artists) {
 				.map(a => a[0].items)
 				.reduce((prev,curr) => [...prev,...curr] ,[])
 				.map(album => app.getAlbumTracks(album.id));
-
 			app.getTracks(albumIds);
 		});
 };
@@ -49,12 +52,14 @@ app.getTracks = function(tracks) {
 		})
 };
 
+
 app.createPlayList = function(songs) {
 	const baseUrl = 'https://embed.spotify.com/?theme=white&uri=spotify:trackset:My Playlist:';
 	songs = songs.map(song => song.id).join(',');
 	$('.loader').removeClass('show');
 	$('.playlist').append(`<iframe src="${baseUrl + songs}" height="400"></iframe>`);
 }
+
 
 app.init = function() {
 	$('form').on('submit', function(e) {
