@@ -53,10 +53,12 @@ section,
 	padding: 0 10px 0 10px;
 	color: #463e3e;
 	flex: 1 0 200px;
+	border-radius: 50px;
+	margin: 20px;
 }
 
 .main-container input[type=submit] {
-	border-radius: 0px 5px 5px 0px;
+	border-radius: 50px;
 	border-left: none;
 	background: white;
 	flex: 1 0 100px;
