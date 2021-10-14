@@ -10,7 +10,7 @@ app.getArists = (artist) => $.ajax({
 	}
 });
 
-console.log(app);
+console.log('hello');
 
 app.getAristsAlbums = (id) => $.ajax({
 	url: `https://api.spotify.com/v1/artists/${id}/albums`,
